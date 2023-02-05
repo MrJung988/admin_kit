@@ -18,10 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', function () {
-    return view('templates.index');
-});
-
 Route::group(['prefix' => 'admin'], function () {
     Route::get('dashboard', [AdminController::class, 'dashboard']);
 });
